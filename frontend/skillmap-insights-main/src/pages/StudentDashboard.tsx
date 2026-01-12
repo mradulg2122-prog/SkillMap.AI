@@ -278,15 +278,28 @@ const StudentDashboard = () => {
                 )}
 
                 {result.roadmap && (
-                  <div className="mt-6 card-elevated p-6">
-                    <h3 className="text-lg font-semibold mb-2">
-                      Personalized Roadmap
-                    </h3>
-                    <pre className="whitespace-pre-wrap text-sm">
-                      {result.roadmap}
-                    </pre>
-                  </div>
-                )}
+  <div className="mt-8 rounded-2xl border border-border bg-gradient-to-br from-card via-card to-primary/5 p-8 shadow-xl">
+    <div className="mb-6 flex items-center gap-3">
+      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/15">
+        📘
+      </div>
+      <div>
+        <h3 className="text-2xl font-bold tracking-tight text-foreground">
+          Your Personalized Learning Roadmap
+        </h3>
+        <p className="text-sm text-muted-foreground">
+          Tailored for your goals & available time
+        </p>
+      </div>
+    </div>
+
+    <div className="prose prose-invert max-w-none leading-relaxed text-base">
+      <pre className="whitespace-pre-wrap font-[Inter,system-ui] text-[15px] text-foreground/90">
+{result.roadmap}
+      </pre>
+    </div>
+  </div>
+)}
 
                 <div className="mt-8 text-center">
                   <Button
