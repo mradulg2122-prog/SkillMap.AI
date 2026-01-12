@@ -9,3 +9,4 @@ psycopg2
 email-validator
 passlib
 python-jose[cryptography]
+openai>=1.0.0
