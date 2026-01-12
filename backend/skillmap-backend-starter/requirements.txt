@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+pdfplumber
+python-docx
+python-multipart
+sqlalchemy
+psycopg2
+email-validator
+passlib
+python-jose[cryptography]
