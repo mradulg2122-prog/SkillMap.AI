@@ -35,19 +35,34 @@ async def generate_roadmap(job_role: str, missing_skills: list[str], duration: s
         return "You already match all required skills. No roadmap is needed 🎉"
 
     prompt = f"""
+You are a friendly career mentor.
+
 A student wants to become a {job_role}.
 They have {duration} to prepare.
-Missing skills: {', '.join(missing_skills)}.
+Their missing skills are: {', '.join(missing_skills)}.
 
-Create a beginner-friendly learning roadmap.
-Break it week-wise.
-Each week should include:
-- Topics
-- What to study
-- Small practice tasks
+Create a beautiful, easy-to-read, beginner-friendly learning roadmap.
 
-Use simple and clear language.
+Format it like this:
+
+Week 1: <Title>
+Topics:
+- ...
+
+What to Learn:
+- ...
+
+Practice Tasks:
+- ...
+
+Use simple English.
+Keep it motivating and human.
+Avoid long paragraphs.
+Make it feel like a personal study plan, not a textbook.
+
+End with a short motivational line for the student.
 """
+
 
     response = client.chat.completions.create(
         model="gpt-4o-mini",
